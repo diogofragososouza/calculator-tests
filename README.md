@@ -12,7 +12,7 @@ a. Ensure Docker is installed and running on your machine.
 
 b. Pull the Docker image using the provided command:
 
-docker pull public.ecr.aws/l4q9w4c5/loanpro-calculator￾cli:latest
+docker pull public.ecr.aws/l4q9w4c5/loanpro-calculator-cli:latest
 
 2. Install Behave by running:
 
