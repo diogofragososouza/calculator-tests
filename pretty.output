@@ -1,66 +1,148 @@
 Feature: Calculator # features/calculator.feature:1
 
-  Scenario: Add two positive numbers  # features/calculator.feature:3
-    Given I have a calculator         # steps/calculator_steps.py:4
-    When I add 8 and 5                # steps/calculator_steps.py:9
-    Then the result should be 13      # steps/calculator_steps.py:48
+  Scenario: TC001 Add two positive numbers  # features/calculator.feature:3
+    Given I have a calculator               # steps/calculator_steps.py:9
+    When I add 8 and 5                      # steps/calculator_steps.py:14
+    Then the result should be 13            # steps/calculator_steps.py:50
 
-  Scenario: Subtract two numbers  # features/calculator.feature:8
-    Given I have a calculator     # steps/calculator_steps.py:4
-    When I subtract 3 from 10     # steps/calculator_steps.py:18
-    Then the result should be 7   # steps/calculator_steps.py:48
+  Scenario: TC002 Subtract two numbers  # features/calculator.feature:8
+    Given I have a calculator           # steps/calculator_steps.py:9
+    When I subtract 3 from 10           # steps/calculator_steps.py:22
+    Then the result should be 7         # steps/calculator_steps.py:50
 
-  Scenario: Multiply two numbers  # features/calculator.feature:13
-    Given I have a calculator     # steps/calculator_steps.py:4
-    When I multiply 4 and 2       # steps/calculator_steps.py:27
-    Then the result should be 8   # steps/calculator_steps.py:48
+  Scenario: TC003 Multiply two numbers  # features/calculator.feature:13
+    Given I have a calculator           # steps/calculator_steps.py:9
+    When I multiply 4 and 2             # steps/calculator_steps.py:30
+    Then the result should be 8         # steps/calculator_steps.py:50
 
-  Scenario: Divide two numbers  # features/calculator.feature:18
-    Given I have a calculator   # steps/calculator_steps.py:4
-    When I divide 9 by 3        # steps/calculator_steps.py:36
-    Then the result should be 3 # steps/calculator_steps.py:48
+  Scenario: TC004 Divide two numbers  # features/calculator.feature:18
+    Given I have a calculator         # steps/calculator_steps.py:9
+    When I divide 9 by 3              # steps/calculator_steps.py:38
+    Then the result should be 3       # steps/calculator_steps.py:50
 
-  Scenario: Add a positive and a negative number  # features/calculator.feature:23
-    Given I have a calculator                     # steps/calculator_steps.py:4
-    When I add 7 and -2                           # steps/calculator_steps.py:9
-    Then the result should be 5                   # steps/calculator_steps.py:48
+  Scenario: TC005 Add a positive and a negative number  # features/calculator.feature:23
+    Given I have a calculator                           # steps/calculator_steps.py:9
+    When I add 7 and -2                                 # steps/calculator_steps.py:14
+    Then the result should be 5                         # steps/calculator_steps.py:50
 
-  Scenario: Divide by zero     # features/calculator.feature:28
-    Given I have a calculator  # steps/calculator_steps.py:4
-    When I divide 10 by 0      # steps/calculator_steps.py:36
-    Then an error should occur # steps/calculator_steps.py:52
+  Scenario: TC006 Divide by zero  # features/calculator.feature:28
+    Given I have a calculator     # steps/calculator_steps.py:9
+    When I divide 10 by 0         # steps/calculator_steps.py:38
+    Then an error should occur    # steps/calculator_steps.py:131
 
-  Scenario: Add two large numbers     # features/calculator.feature:33
-    Given I have a calculator         # steps/calculator_steps.py:4
-    When I add 1000000 and 2000000    # steps/calculator_steps.py:9
-    Then the result should be 3000000 # steps/calculator_steps.py:48
+  Scenario: TC007 Add two large numbers  # features/calculator.feature:33
+    Given I have a calculator            # steps/calculator_steps.py:9
+    When I add 1000000 and 2000000       # steps/calculator_steps.py:14
+    Then the result should be 3000000    # steps/calculator_steps.py:50
 
-  Scenario: Subtract a larger number from a smaller number  # features/calculator.feature:38
-    Given I have a calculator                               # steps/calculator_steps.py:4
-    When I subtract 10 from 5                               # steps/calculator_steps.py:18
-    Then the result should be -5                            # steps/calculator_steps.py:48
+  Scenario: TC008 Subtract a larger number from a smaller number  # features/calculator.feature:38
+    Given I have a calculator                                     # steps/calculator_steps.py:9
+    When I subtract 10 from 5                                     # steps/calculator_steps.py:22
+    Then the result should be -5                                  # steps/calculator_steps.py:50
 
-  Scenario: Multiply by zero    # features/calculator.feature:43
-    Given I have a calculator   # steps/calculator_steps.py:4
-    When I multiply 15 and 0    # steps/calculator_steps.py:27
-    Then the result should be 0 # steps/calculator_steps.py:48
+  Scenario: TC009 Multiply by zero  # features/calculator.feature:43
+    Given I have a calculator       # steps/calculator_steps.py:9
+    When I multiply 15 and 0        # steps/calculator_steps.py:30
+    Then the result should be 0     # steps/calculator_steps.py:50
 
-  Scenario: Divide a number by itself  # features/calculator.feature:48
-    Given I have a calculator          # steps/calculator_steps.py:4
-    When I divide 7 by 7               # steps/calculator_steps.py:36
-    Then the result should be 1        # steps/calculator_steps.py:48
+  Scenario: TC010 Divide a number by itself  # features/calculator.feature:48
+    Given I have a calculator                # steps/calculator_steps.py:9
+    When I divide 7 by 7                     # steps/calculator_steps.py:38
+    Then the result should be 1              # steps/calculator_steps.py:50
 
-  Scenario: Divide a very large number                # features/calculator.feature:53
-    Given I have a calculator                         # steps/calculator_steps.py:4
-    When I divide 100000000000000000000000 by 2       # steps/calculator_steps.py:36
-    Then the result should be 50000000000000000000000 # steps/calculator_steps.py:48
+  Scenario: TC011 Divide a very large number          # features/calculator.feature:53
+    Given I have a calculator                         # steps/calculator_steps.py:9
+    When I divide 100000000000000000000000 by 2       # steps/calculator_steps.py:38
+    Then the result should be 50000000000000000000000 # steps/calculator_steps.py:50
       Traceback (most recent call last):
-        File "/usr/lib/python3/dist-packages/behave/model.py", line 1329, in run
+        File "/home/diogo/.local/lib/python3.8/site-packages/behave/model.py", line 1329, in run
           match.run(runner.context)
-        File "/usr/lib/python3/dist-packages/behave/matchers.py", line 98, in run
+        File "/home/diogo/.local/lib/python3.8/site-packages/behave/matchers.py", line 98, in run
           self.func(context, *args, **kwargs)
-        File "steps/calculator_steps.py", line 50, in step_then_the_result_should_be
+        File "steps/calculator_steps.py", line 52, in step_then_the_result_should_be_integers
           assert context.result == expected_result
       AssertionError
 
+
+  Scenario: TC012 Multiply zero by a positive integer  # features/calculator.feature:58
+    Given I have a calculator                          # steps/calculator_steps.py:9
+    When I multiply 0 and 5                            # steps/calculator_steps.py:30
+    Then the result should be 0                        # steps/calculator_steps.py:50
+
+  Scenario: TC013 Add non-numeric values  # features/calculator.feature:63
+    Given I have a calculator             # steps/calculator_steps.py:9
+    When I add non-numeric "a" and 5      # steps/calculator_steps.py:99
+    Then an error should occur            # steps/calculator_steps.py:131
+
+  Scenario: TC014 Add two large decimal numbers               # features/calculator.feature:68
+    Given I have a calculator                                 # steps/calculator_steps.py:9
+    When I add decimals 12345678.1234567 and 98765432.1234567 # steps/calculator_steps.py:55
+    Then the result should be 111111110.2469134               # steps/calculator_steps.py:90
+
+  Scenario: TC015 Add a small number to a decimal number  # features/calculator.feature:73
+    Given I have a calculator                             # steps/calculator_steps.py:9
+    When I add decimals 0.0000001 and 1000.0000001        # steps/calculator_steps.py:55
+    Then the result should be 1000.0000002                # steps/calculator_steps.py:90
+
+  Scenario: TC016 Subtract a negative integer from a positive integer  # features/calculator.feature:78
+    Given I have a calculator                                          # steps/calculator_steps.py:9
+    When I subtract -5 from 10                                         # steps/calculator_steps.py:22
+    Then the result should be 15                                       # steps/calculator_steps.py:50
+
+  Scenario: TC017 Divide a decimal number by an integer  # features/calculator.feature:83
+    Given I have a calculator                            # steps/calculator_steps.py:9
+    When I divide decimals 100.5 by 2                    # steps/calculator_steps.py:79
+    Then the result should be 50.25                      # steps/calculator_steps.py:90
+
+  Scenario: TC018 Multiply two large decimal numbers   # features/calculator.feature:88
+    Given I have a calculator                          # steps/calculator_steps.py:9
+    When I multiply decimals 12345.6789 and 98765.4321 # steps/calculator_steps.py:71
+    Then the result should be 1219326311.1263527       # steps/calculator_steps.py:90
+
+  Scenario: TC019 Subtract a decimal number from a large integer  # features/calculator.feature:93
+    Given I have a calculator                                     # steps/calculator_steps.py:9
+    When I subtract decimals 0.1234567 from 1000000               # steps/calculator_steps.py:63
+    Then the result should be 999999.8765433                      # steps/calculator_steps.py:90
+
+  Scenario: TC020 Subtract a very small number from a decimal number  # features/calculator.feature:98
+    Given I have a calculator                                         # steps/calculator_steps.py:9
+    When I subtract decimals 0.0000001 from 1.0000001                 # steps/calculator_steps.py:63
+    Then the result should be 1.0                                     # steps/calculator_steps.py:90
+
+  Scenario: TC021 Add two decimal numbers       # features/calculator.feature:103
+    Given I have a calculator                   # steps/calculator_steps.py:9
+    When I add decimals 1.2345678 and 9.8765432 # steps/calculator_steps.py:55
+    Then the result should be 11.111111         # steps/calculator_steps.py:90
+
+  Scenario: TC022 Subtract a decimal number from an integer  # features/calculator.feature:108
+    Given I have a calculator                                # steps/calculator_steps.py:9
+    When I subtract decimals 1.2345678 from 10               # steps/calculator_steps.py:63
+    Then the result should be 8.7654322                      # steps/calculator_steps.py:90
+
+  Scenario: TC023 Multiply two decimal numbers       # features/calculator.feature:113
+    Given I have a calculator                        # steps/calculator_steps.py:9
+    When I multiply decimals 1.2345678 and 9.8765432 # steps/calculator_steps.py:71
+    Then the result should be 12.1932631             # steps/calculator_steps.py:90
+      Assertion Failed: Expected 12.1932631, but got 12.19326221
+
+
+  Scenario: TC024 Divide a large decimal number by an integer  # features/calculator.feature:118
+    Given I have a calculator                                  # steps/calculator_steps.py:9
+    When I divide decimals 98765432.1234567 by 3               # steps/calculator_steps.py:79
+    Then the result should be 32921810.7078189                 # steps/calculator_steps.py:90
+
+  Scenario: TC025 Divide non-numeric values  # features/calculator.feature:123
+    Given I have a calculator                # steps/calculator_steps.py:9
+    When I divide non-numeric "a" by 5       # steps/calculator_steps.py:123
+    Then an error should occur               # steps/calculator_steps.py:131
+
+  Scenario: TC026 Multiply non-numeric values  # features/calculator.feature:128
+    Given I have a calculator                  # steps/calculator_steps.py:9
+    When I multiply non-numeric "a" by 5       # steps/calculator_steps.py:115
+    Then an error should occur                 # steps/calculator_steps.py:131
+
+  Scenario: TC027 Subtract non-numeric values  # features/calculator.feature:133
+    Given I have a calculator                  # steps/calculator_steps.py:9
+    When I subtract non-numeric "a" from 5     # steps/calculator_steps.py:107
+    Then an error should occur                 # steps/calculator_steps.py:131
 
